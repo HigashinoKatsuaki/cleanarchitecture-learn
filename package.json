@@ -5,5 +5,10 @@
   "main": "index.js",
   "repository": "https://github.com/HigashinoKatsuaki/cleanarchitecture-learn.git",
   "author": "Higashino <ukikkiosaru@icloud.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "next": "^9.2.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  }
 }
