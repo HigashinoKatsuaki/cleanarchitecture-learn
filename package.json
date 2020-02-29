@@ -1,0 +1,9 @@
+{
+  "name": "cleanarchitecture-learn",
+  "version": "1.0.0",
+  "description": "cleanarchitecture-learn",
+  "main": "index.js",
+  "repository": "https://github.com/HigashinoKatsuaki/cleanarchitecture-learn.git",
+  "author": "Higashino <ukikkiosaru@icloud.com>",
+  "license": "MIT"
+}
