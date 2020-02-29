@@ -17,3 +17,5 @@ vendor/
 docker/
 
 node_modules/
+
+.next/
