@@ -12,3 +12,7 @@ type TodoUsecase struct {
 func (u *TodoUsecase) All() []*model.Todo {
 	return u.Repo.All()
 }
+
+func (u *TodoUsecase) Save(t *model.Todo) error {
+	return u.Repo.Save(t)
+}

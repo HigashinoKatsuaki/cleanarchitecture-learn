@@ -27,6 +27,7 @@ func main() {
 
 	// ルーティング
 	e.GET("/todos", todoHandler.All())
+	e.POST("/todos", todoHandler.Save())
 
 	// サーバー起動
 	e.Start(":9001")

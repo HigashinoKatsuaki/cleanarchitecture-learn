@@ -2,6 +2,7 @@ package infra
 
 import (
 	"cleanarchitecture-learn/src/domain/model"
+	"fmt"
 	"log"
 
 	"github.com/jmoiron/sqlx"
@@ -32,4 +33,18 @@ func (r *TodoRepository) All() []*model.Todo {
 	}
 
 	return todoList
+}
+
+func (r *TodoRepository) Save(todo *model.Todo) error {
+	insert := "INSERT INTO todos(status, task) VALUES(?, ?)"
+
+	if todo.Status == "" {
+		todo.Status = "in progress"
+	}
+
+	fmt.Println(todo)
+
+	_, err := r.DB.Exec(insert, todo.Status, todo.Task)
+
+	return err
 }
