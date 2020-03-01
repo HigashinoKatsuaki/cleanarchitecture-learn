@@ -17,4 +17,22 @@ services:
     - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
     - ./docker/db/sql:/docker-entrypoint-initdb.d
     ports:
-    - 9000:3306
+      - 9000:3306
+  backend:
+    image: golang:alpine
+    container_name: backend
+    volumes:
+      - .:/go/github.com/app/cleanarchitecture-learn
+    ports:
+      - 9001:9001
+    working_dir: /go/github.com/app/cleanarchitecture-learn
+    command: go run src/main.go
+  front_end:
+    image: node:alpine
+    container_name: front_end
+    volumes:
+      - .:/src
+    working_dir: /src
+    command: [sh, -c, yarn && yarn run next]
+    ports:
+      - 9002:3000
