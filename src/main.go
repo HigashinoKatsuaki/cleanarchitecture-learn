@@ -15,6 +15,7 @@ func main() {
 
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
+	e.Use(middleware.CORS())
 
 	db, err := sqlx.Connect("mysql", "root:root@(localhost:9000)/development?parseTime=true&loc=Asia%2FTokyo")
 
