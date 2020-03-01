@@ -18,3 +18,7 @@ goose up
 docker-compose up
 ```
 localhost:9002がフロントエンドです
+
+## ディレクトリ構成
+src以下がバックエンド
+pages以下がフロントエンド
