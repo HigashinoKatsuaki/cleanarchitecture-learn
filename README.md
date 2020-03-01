@@ -2,11 +2,6 @@
 goでクリーンアーキテクチャ書いてみた
 
 ## 動かし方
-### mysql起動
-```
-docker-compose up
-```
-
 ### マイグレーション
 gooseでスキーマ管理しているので、gooseをインストールしていない場合以下を実行
 ```
@@ -18,13 +13,8 @@ migrate
 goose up
 ```
 
-### バックエンドを起動
+### アプリケーション起動
 ```
-go run src/main.go
+docker-compose up
 ```
-
-### フロントエンドを起動
-```
-yarn run next -p 9002
-```
-※ ポートは好きなところでOK
+localhost:9002がフロントエンドです
